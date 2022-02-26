@@ -5,7 +5,7 @@
 bool checkPrime(uint64_t value) {
     // вставьте код функции
     int f = 0;
-    for (int i = 2; i <= sqrt(value); i++) {
+    for (int i = 2; i * i <= value; i++) {
         if (value % i == 0) {
             f = 1;
         }
@@ -51,7 +51,7 @@ uint64_t nextPrime(uint64_t value) {
     while (true)
     {
         int f = 0;
-        for (int i = 2; i <= sqrt(v); i++) {
+        for (int i = 2; i * i <= v; i++) {
             if (v % i == 0) {
                 f = 1;
             }
