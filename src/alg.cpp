@@ -66,7 +66,7 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    int v = 2;
+    int v = 0;
     int s = 0;
     while (v < hbound)
     {
@@ -75,6 +75,9 @@ uint64_t sumPrime(uint64_t hbound) {
             if (v % i == 0) {
                 f = 1;
             }
+        }
+        if (v == 1) {
+            f = 1;
         }
         if (f == 0) {
             s += v;
