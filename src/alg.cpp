@@ -47,7 +47,7 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-    int v = n + 1;
+    int v = value + 1;
     while (true)
     {
         int f = 0;
@@ -68,7 +68,7 @@ uint64_t nextPrime(uint64_t value) {
 uint64_t sumPrime(uint64_t hbound) {
     int v = 2;
     int s = 0;
-    while (v < n)
+    while (v < hbound)
     {
         int f = 0;
         for (int i = 2; i * i <= v; i++) {
