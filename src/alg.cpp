@@ -71,7 +71,7 @@ uint64_t sumPrime(uint64_t hbound) {
     while (v < n)
     {
         int f = 0;
-        for (int i = 2; i <= sqrt(v); i++) {
+        for (int i = 2; i * i <= v; i++) {
             if (v % i == 0) {
                 f = 1;
             }
