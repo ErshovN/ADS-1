@@ -69,18 +69,23 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-  // вставьте код функции
-  uint64_t sum = 5;
-    for (int i = 2; i < hbound; i++) {
-        if (i % 2 == 0) {
-            continue;
+  uint64_t v = 0;
+    uint64_t s = 0;
+    while (v < hbound)
+    {
+        int f = 0;
+        for (int i = 2; i * i <= v; i++) {
+            if (v % i == 0) {
+                f = 1;
+            }
         }
-        if (i % 3 == 0) {
-            continue;
+        if (v == 1) {
+            f = 1;
         }
-        if (checkPrime(i)) {
-            sum = sum + i;
+        if (f == 0) {
+            s += v;
         }
+        v++;
     }
-    return sum;
+    return s;
 }
